@@ -12,8 +12,8 @@
 
     console.log('Attempting Connection...');
 
-    socket.onopen = () => {
-        console.log('Connection Opened...');
+    socket.onopen = (event) => {
+        console.log('Connection Opened...', event);
         socket.send('Hi...');
     };
 
