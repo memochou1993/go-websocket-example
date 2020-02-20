@@ -33,10 +33,10 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 	log.Println("Connected...")
 
-	render(conn)
+	handle(conn)
 }
 
-func render(conn *websocket.Conn) {
+func handle(conn *websocket.Conn) {
 	for {
 		messageType, p, err := conn.ReadMessage()
 
